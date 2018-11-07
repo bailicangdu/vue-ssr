@@ -14,7 +14,7 @@ module.exports = {
      */
     name: 'vue-ssr',
     // 入口文件
-    script: 'index.js',
+    script: 'server/index.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
