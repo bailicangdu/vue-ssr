@@ -23,7 +23,7 @@ module.exports = {
      * 如果设置为 'max'，则pm2会根据系统cpu核数设置最大的值
      * 如果为负数，则为 max - 数 个实例
      */
-    instances: "max" ,
+    instances: 1 ,
     autorestart: true,
     // 开发阶段用到，文件修改后自动重启
     watch: false,
@@ -65,6 +65,8 @@ module.exports = {
   deploy : {
     // production 是和上面的 env_production 对应的
     production : {
+      // pm2 采用ssh的方式连接服务器
+      // 用户名为 服务器的用户名，也就是ssh登录的用户
       user : 'root',
       host : ['139.224.234.213'],
       port : '22',
