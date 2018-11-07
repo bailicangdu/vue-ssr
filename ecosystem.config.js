@@ -65,8 +65,8 @@ module.exports = {
   deploy : {
     // production 是和上面的 env_production 对应的
     production : {
-      user : 'cangdu',
-      host : '139.224.234.213',
+      user : 'root',
+      host : ['139.224.234.213'],
       port : '22',
       ref  : 'origin/master',
       repo : 'https://github.com/bailicangdu/vue-ssr.git',
