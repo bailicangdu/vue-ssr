@@ -46,7 +46,9 @@ module.exports = {
       NODE_ENV: 'development'
     },
     env_production: {
-      NODE_ENV: 'production'
+      NODE_ENV: 'production',
+      HOST: '0.0.0.0',
+      PORT: 8007,
     }
   }],
 
@@ -81,7 +83,7 @@ module.exports = {
       // 发版前，可以在本地执行某些操作
       'pre-deploy-local': 'echo "准备发版"',
       // 发版前，可以在服务器执行某些操作
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'npm install && pm2 reload --env production',
     }
   }
 };
